@@ -16,16 +16,15 @@ private:
 
 public:
     Player(const string& name) : playerName(name) {}
-
-    ~Player();
+    ~Player() = default;
 
     void addCardToBench(Card* card);
-    void activatePokemonCard(int index);
+    void activatePokemonCard(unsigned int index);
 
-    void attachEnergyCard(int benchIndex, int attackIndex);
+    void attachEnergyCard(unsigned int benchIndex, unsigned int attackIndex);
 
-    void attack(int attackerIndex, int attackIndex, Player& opponent, int targetIndex);
-    void useTrainer(int benchIndex);
+    void attack(unsigned int attackerIndex,unsigned int attackIndex, Player& opponent,unsigned int targetIndex);
+    void useTrainer(unsigned int benchIndex);
 
     void displayBench() const;
 

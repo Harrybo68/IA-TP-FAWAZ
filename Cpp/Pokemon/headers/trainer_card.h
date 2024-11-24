@@ -15,6 +15,8 @@ public:
 
     void displayInfo() const override;
 
+    string getEffectDescription() const;
+
     void applyEffect(vector<PokemonCard*>& actionCards);
 };
 
